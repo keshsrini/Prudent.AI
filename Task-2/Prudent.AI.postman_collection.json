@@ -1,0 +1,76 @@
+{
+	"info": {
+		"_postman_id": "65abd511-00ac-4c94-9db9-8d0d37987dda",
+		"name": "Prudent.AI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42975656",
+		"_collection_link": "https://kmcas-ck.postman.co/workspace/aef4cd45-9d3a-41d9-87f6-d1e177d247b1/collection/42975656-65abd511-00ac-4c94-9db9-8d0d37987dda?action=share&source=collection_link&creator=42975656"
+	},
+	"item": [
+		{
+			"name": "Get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/movies?q=avengers&page=1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"movies"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "avengers"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nums\": [4, 1, 6, 3, 8],\r\n  \"k\": 2\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/price-gap-pair",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"price-gap-pair"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

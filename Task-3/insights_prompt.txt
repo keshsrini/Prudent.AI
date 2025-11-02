@@ -1,0 +1,40 @@
+Based on the following W-2 tax data and employee address, generate concise tax insights as a bulleted list.
+
+W-2 Data: {json_data}
+Employee Address: {address}
+
+Generate insights for:
+
+1. Address validation:
+   - ZIP code matches state
+   - Missing apartment/unit numbers
+   - Non-US postal patterns
+
+2. Tax withholding analysis:
+   - Federal withholding percentage vs wages
+   - Compare to standard tax brackets
+   - Flag unusually high/low withholding
+
+3. Social Security analysis:
+   - Check if wages near annual cap ($160,200 for 2023)
+   - Verify SS tax calculation (6.2% rate)
+
+4. Medicare analysis:
+   - Verify Medicare tax (1.45% rate)
+   - Check for additional Medicare tax (0.9% over $200k)
+
+5. Multi-state detection:
+   - Note if multiple state entries present
+   - Flag potential multi-state filing requirements
+
+6. Consistency checks:
+   - Box 1 wages vs Box 3 SS wages vs Box 5 Medicare wages
+   - Verify tax calculations match rates
+   - Check for tips (Box 7) if present
+
+7. Follow-up recommendations:
+   - Local tax filing requirements
+   - Estimated tax payment needs
+   - Retirement contribution opportunities
+
+Return as simple bullet points, each insight on one line. Focus on actionable items and potential issues.

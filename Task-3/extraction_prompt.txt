@@ -1,0 +1,59 @@
+Extract all W-2 tax form data from this image and return ONLY valid JSON with this exact structure:
+
+{
+    "employee": {
+        "name": "",
+        "address": {
+            "street": "",
+            "city": "",
+            "state": "",
+            "zip": ""
+        },
+        "ssn_last4": "",
+        "ein_last4": ""
+    },
+    "employer": {
+        "name": "",
+        "address": {
+            "street": "",
+            "city": "",
+            "state": "",
+            "zip": ""
+        },
+        "ein": ""
+    },
+    "federal_boxes": {
+        "box1_wages": 0,
+        "box2_federal_tax": 0,
+        "box3_ss_wages": 0,
+        "box4_ss_tax": 0,
+        "box5_medicare_wages": 0,
+        "box6_medicare_tax": 0,
+        "box7_ss_tips": 0,
+        "box8_allocated_tips": 0,
+        "box10_dependent_care": 0,
+        "box11_nonqualified_plans": 0,
+        "box12_codes": [],
+        "box13_statutory": false,
+        "box13_retirement": false,
+        "box13_sick_pay": false,
+        "box14_other": []
+    },
+    "state_local": {
+        "state_code": "",
+        "employer_state_id": "",
+        "state_wages": 0,
+        "state_tax": 0,
+        "locality_name": "",
+        "local_wages": 0,
+        "local_tax": 0
+    }
+}
+
+Instructions:
+- Extract exact values from the W-2 form
+- For SSN, only include the last 4 digits
+- For EIN, mask all but last 4 digits
+- Convert all monetary amounts to numbers (no commas or dollar signs)
+- Use uppercase for names and addresses
+- Return ONLY the JSON, no additional text
